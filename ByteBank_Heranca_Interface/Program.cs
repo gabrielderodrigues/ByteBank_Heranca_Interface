@@ -11,13 +11,29 @@ namespace ByteBank_Heranca_Interface
     {
         public static void Main(string[] args)
         {
-            Funcionario carlos = new Funcionario(1);
+            GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
+
+            Funcionario carlos = new Funcionario();
             carlos.Nome = "Carlos";
             carlos.CPF = "544.653.987-85";
             carlos.Salario = 2000;
 
+            gerenciador.Registrar(carlos);
+
+            Diretor roberto = new Diretor();
+            roberto.Nome = "Roberto";
+            roberto.CPF = "454.856.523-90";
+            roberto.Salario = 7000;
+
+            gerenciador.RegistrarDiretor(roberto);
+
             Console.WriteLine(carlos.Nome);
             Console.WriteLine(carlos.GetBonificacao());
+            Console.WriteLine();
+            Console.WriteLine(roberto.Nome);
+            Console.WriteLine(roberto.GetBonificacao());
+            Console.WriteLine();
+            Console.WriteLine("Total de bonificações: " + gerenciador.GetTotalBonificacao());
 
             Console.ReadLine();
         }
