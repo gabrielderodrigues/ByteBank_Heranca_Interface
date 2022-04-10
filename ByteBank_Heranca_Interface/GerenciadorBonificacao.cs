@@ -9,21 +9,16 @@ namespace ByteBank_Heranca_Interface
 {
     public class GerenciadorBonificacao
     {
-        private double totalBonificacao;
+        private double _totalBonificacao;
 
         public void Registrar(Funcionario funcionario)
         {
-            totalBonificacao += funcionario.GetBonificacao();
-        }
-
-        public void RegistrarDiretor(Diretor diretor)
-        {
-            totalBonificacao += diretor.GetBonificacao();
+            _totalBonificacao += funcionario.GetBonificacao();
         }
 
         public double GetTotalBonificacao()
         {
-            return totalBonificacao;
+            return _totalBonificacao;
         }
     }
 }
