@@ -23,7 +23,7 @@ namespace ByteBank_Heranca_Interface
             Diretor roberto = new Diretor();
             roberto.Nome = "Roberto";
             roberto.CPF = "454.856.523-90";
-            roberto.Salario = 7000;
+            roberto.Salario = 5000;
 
             Funcionario robertoTeste = roberto;
 
