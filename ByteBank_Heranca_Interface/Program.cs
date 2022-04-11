@@ -20,12 +20,15 @@ namespace ByteBank_Heranca_Interface
 
             gerenciador.Registrar(carlos);
 
-            Funcionario pedro = new Diretor();
-
             Diretor roberto = new Diretor();
             roberto.Nome = "Roberto";
             roberto.CPF = "454.856.523-90";
             roberto.Salario = 7000;
+
+            Funcionario robertoTeste = roberto;
+
+            Console.WriteLine("Bonificação de uma referência de Diretor: " + roberto.GetBonificacao());
+            Console.WriteLine("Bonificação de uma referência de Funcionario: " + robertoTeste.GetBonificacao());
 
             gerenciador.Registrar(roberto);
 
