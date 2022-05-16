@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ByteBank_Heranca_Interface.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
         public static int TotalFuncionarios { get; private set; }
         public string Nome { get; set; }
@@ -20,16 +20,10 @@ namespace ByteBank_Heranca_Interface.Funcionarios
             TotalFuncionarios++;
         }
 
-        public virtual double GetBonificacao()
-        { 
-            return Salario * 0.10;
+        public abstract void AumentarSalario();
+
+        public abstract double GetBonificacao();
         }
 
-        public virtual void AumentarSalario()
-        {
-            //Salario = Salario + (Salario * 0.1);
-            //Salario = Salario * 1.1;
-            Salario *= 1.1;
-        }
     }
 }
