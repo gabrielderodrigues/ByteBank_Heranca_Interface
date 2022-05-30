@@ -31,8 +31,12 @@ namespace ByteBank_Heranca_Interface
             camila.Nome = "Camila";
             camila.Senha = "7890";
 
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123456";
+
             sistemaInterno.Logar(roberta, "1234");
             sistemaInterno.Logar(roberta, "abc");
+            sistemaInterno.Logar(parceiro, "123456");
         }
 
         public static void CalcularBonificacao()
