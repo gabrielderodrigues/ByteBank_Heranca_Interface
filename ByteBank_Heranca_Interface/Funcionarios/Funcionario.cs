@@ -23,7 +23,5 @@ namespace ByteBank_Heranca_Interface.Funcionarios
         public abstract void AumentarSalario();
 
         public abstract double GetBonificacao();
-        }
-
     }
 }
